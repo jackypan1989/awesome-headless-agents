@@ -90,7 +90,15 @@ Excluded: GUI-first apps with a thin CLI wrapper, the agents themselves (see [Re
 
 ## Sandboxes & Execution
 
+- [AIO Sandbox](https://github.com/agent-infra/sandbox) 🆓 🔌 — Browser, shell, file system, VS Code Server, and MCP in a single Docker container.
+- [Cloudflare Sandbox SDK](https://github.com/cloudflare/sandbox-sdk) 💲 — Isolated containers on Cloudflare's network, controlled from Workers.
 - [E2B](https://github.com/e2b-dev/E2B) 🆓 💲 — Secure cloud sandboxes for running AI-generated code.
+- [microsandbox](https://github.com/superradcompany/microsandbox) 🆓 — Local-first microVM runtime for running untrusted code.
+- [Modal](https://github.com/modal-labs/modal-client) 💲 — Programmatic containers with optional GPUs via Modal Sandboxes.
+- [OpenSandbox](https://github.com/opensandbox-group/OpenSandbox) 🆓 — Self-hosted sandbox runtime for AI agents.
+- [Runloop](https://github.com/runloopai/api-client-python) 💲 — Devboxes where agents run code, edit files, and expose ports.
+- [sandbox-runtime](https://github.com/anthropics/sandbox-runtime) 🆓 — OS-level filesystem and network restrictions for any process, no container required.
+- [Vercel Sandbox](https://github.com/vercel/sandbox) 💲 — Ephemeral Firecracker microVMs for untrusted code, with SDK and CLI.
 
 ## MCP Servers
 
