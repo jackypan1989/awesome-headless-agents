@@ -20,6 +20,9 @@ Most "awesome agent" lists catalog the agents themselves. This one catalogs what
 - [Secrets & Auth](#secrets--auth)
 - [Sandboxes & Execution](#sandboxes--execution)
 - [Developer Workflow](#developer-workflow)
+- [Codebase Context](#codebase-context)
+- [Code Quality & Security](#code-quality--security)
+- [Testing & QA](#testing--qa)
 - [Cloud & Infra CLIs](#cloud--infra-clis)
 - [Notifications](#notifications)
 - [MCP Servers](#mcp-servers)
@@ -335,6 +338,37 @@ _Operate repositories, CI, and project tasks from the command line._
 - [pre-commit](https://github.com/pre-commit/pre-commit) 🆓 ★ 15.7k - Runs a repo's configured hooks; `pre-commit run --all-files` checks everything in one command.
 - [Task](https://github.com/go-task/task) 🆓 ★ 16.3k - YAML-based task runner; `task --list --json` lets agents discover tasks.
 - [uv](https://github.com/astral-sh/uv) 🆓 ★ 91.2k - Fast Python package manager; `uvx` runs any Python CLI in a throwaway environment.
+
+## Codebase Context
+
+_Pack, index, and measure a codebase so an agent can load what it needs._
+
+- [gitingest](https://github.com/coderamp-labs/gitingest) 🆓 ★ 16k - Turns a local path or GitHub URL into a prompt-friendly text digest of the repository.
+- [Repomix](https://github.com/yamadashy/repomix) 🆓 🔌 ★ 29k - Packs a repository into one XML, Markdown, or plain-text file, with token counts and optional compression.
+- [scc](https://github.com/boyter/scc) 🆓 ★ 8.8k - Counts lines, code, and complexity per language; `--format json` for machine output.
+- [tree-sitter](https://github.com/tree-sitter/tree-sitter) 🆓 ★ 27.3k - Incremental parser; the CLI parses files and runs structural queries across many languages.
+- [Universal Ctags](https://github.com/universal-ctags/ctags) 🆓 ★ 7.3k - Indexes symbol definitions; `--output-format=json` emits one JSON object per tag.
+
+## Code Quality & Security
+
+_Linters and scanners that report findings as JSON with non-zero exits._
+
+- [actionlint](https://github.com/rhysd/actionlint) 🆓 ★ 4.3k - Checks GitHub Actions workflow files; `-format '{{json .}}'` prints findings as JSON.
+- [Gitleaks](https://github.com/gitleaks/gitleaks) 🆓 ★ 30.3k - Finds hard-coded secrets in Git history and files; `--report-format json`.
+- [Ruff](https://github.com/astral-sh/ruff) 🆓 ★ 50.3k - Fast Python linter and formatter; `--output-format json` and `--fix`.
+- [Semgrep](https://github.com/semgrep/semgrep) 🆓 💲 ★ 17.3k - Pattern-based static analysis for many languages; `--json` output.
+- [ShellCheck](https://github.com/koalaman/shellcheck) 🆓 ★ 40.2k - Static analysis for shell scripts; `-f json1` for machine output.
+- [Trivy](https://github.com/aquasecurity/trivy) 🆓 ★ 38.7k - Scans images, filesystems, repos, and IaC for vulnerabilities, misconfigurations, and secrets; `-f json`.
+
+## Testing & QA
+
+_Test APIs, performance, accessibility, and links from the command line._
+
+- [Hurl](https://github.com/Orange-OpenSource/hurl) 🆓 ★ 19.3k - Runs and asserts HTTP requests from plain-text files; `--test` and `--json` for CI.
+- [k6](https://github.com/grafana/k6) 🆓 💲 ★ 32k - Load testing scripted in JavaScript; thresholds fail the run and `--summary-export` writes JSON.
+- [Lighthouse](https://github.com/GoogleChrome/lighthouse) 🆓 ★ 30.9k - Audits performance, accessibility, and SEO in headless Chrome; `--output=json`.
+- [lychee](https://github.com/lycheeverse/lychee) 🆓 ★ 4k - Fast link checker for Markdown, HTML, and websites; `--format json`.
+- [Pa11y](https://github.com/pa11y/pa11y) 🆓 ★ 4.6k - Accessibility tests in headless Chrome; `--reporter json` and non-zero exit on issues.
 
 ## Cloud & Infra CLIs
 
