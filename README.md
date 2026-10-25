@@ -33,7 +33,7 @@ A tool belongs here only if it passes the **headless test**:
 
 Excluded: GUI-first apps with a thin CLI wrapper, the agents themselves (see [Related Lists](#related-lists)), and end-user products.
 
-**Legend:** 🆓 open source · 💲 paid / hosted · 🔌 has an MCP server
+**Legend:** 🆓 open source · 💲 paid / hosted · 🔌 has an MCP server · ★ GitHub/GitLab stars, refreshed weekly
 
 ## Toolchains
 
@@ -97,90 +97,90 @@ _Find sources. Hosted APIs that return ranked results as JSON._
 
 _Turn a URL into clean Markdown or structured data without driving a browser._
 
-- [Crawl4AI](https://github.com/unclecode/crawl4ai) 🆓 - LLM-friendly crawler that outputs clean Markdown.
-- [Firecrawl](https://github.com/firecrawl/firecrawl) 🆓 💲 🔌 - Turns websites into LLM-ready Markdown or structured data.
-- [Jina Reader](https://github.com/jina-ai/reader) 🆓 💲 - Prefix any URL to get LLM-friendly content.
-- [Katana](https://github.com/projectdiscovery/katana) 🆓 - Fast crawling and spidering framework with JSON output.
-- [Trafilatura](https://github.com/adbar/trafilatura) 🆓 - Main-text extraction from web pages; CLI and Python.
-- [xh](https://github.com/ducaale/xh) 🆓 - Friendly HTTP client; scriptable alternative to curl.
+- [Crawl4AI](https://github.com/unclecode/crawl4ai) 🆓 ★ 86.2k - LLM-friendly crawler that outputs clean Markdown.
+- [Firecrawl](https://github.com/firecrawl/firecrawl) 🆓 💲 🔌 ★ 195k - Turns websites into LLM-ready Markdown or structured data.
+- [Jina Reader](https://github.com/jina-ai/reader) 🆓 💲 ★ 12.2k - Prefix any URL to get LLM-friendly content.
+- [Katana](https://github.com/projectdiscovery/katana) 🆓 ★ 17.7k - Fast crawling and spidering framework with JSON output.
+- [Trafilatura](https://github.com/adbar/trafilatura) 🆓 ★ 7k - Main-text extraction from web pages; CLI and Python.
+- [xh](https://github.com/ducaale/xh) 🆓 ★ 8.1k - Friendly HTTP client; scriptable alternative to curl.
 
 ## Headless Browsers
 
 _Browser engines that run with no display._
 
 - [Chrome Headless Shell](https://developer.chrome.com/docs/automation-and-testing/headless-chrome-shell) 🆓 - The standalone headless build of Chromium.
-- [Lightpanda](https://github.com/lightpanda-io/browser) 🆓 - Headless browser written from scratch in Zig for AI and automation; CDP-compatible with a fraction of Chrome's memory.
+- [Lightpanda](https://github.com/lightpanda-io/browser) 🆓 ★ 37k - Headless browser written from scratch in Zig for AI and automation; CDP-compatible with a fraction of Chrome's memory.
 
 ## Browser Automation
 
 _Drive a browser when fetching isn't enough: logins, JavaScript-heavy pages, multi-step flows._
 
-- [agent-browser](https://github.com/vercel-labs/agent-browser) 🆓 - Browser automation CLI built for AI agents.
-- [Browser Use](https://github.com/browser-use/browser-use) 🆓 - Makes websites accessible to AI agents.
+- [agent-browser](https://github.com/vercel-labs/agent-browser) 🆓 ★ 44.6k - Browser automation CLI built for AI agents.
+- [Browser Use](https://github.com/browser-use/browser-use) 🆓 ★ 119k - Makes websites accessible to AI agents.
 - [Browserbase](https://www.browserbase.com) 💲 - Hosted headless browser infrastructure.
-- [Playwright](https://github.com/microsoft/playwright) 🆓 🔌 - Cross-browser automation; the de facto foundation for most agent browser layers.
-- [Puppeteer](https://github.com/puppeteer/puppeteer) 🆓 - JavaScript API for headless Chrome and Firefox.
-- [Stagehand](https://github.com/browserbase/stagehand) 🆓 - SDK for browser agents on top of Playwright.
-- [Steel](https://github.com/steel-dev/steel-browser) 🆓 - Open-source browser API for agents with session management.
+- [Playwright](https://github.com/microsoft/playwright) 🆓 🔌 ★ 98.5k - Cross-browser automation; the de facto foundation for most agent browser layers.
+- [Puppeteer](https://github.com/puppeteer/puppeteer) 🆓 ★ 95.7k - JavaScript API for headless Chrome and Firefox.
+- [Stagehand](https://github.com/browserbase/stagehand) 🆓 ★ 25.8k - SDK for browser agents on top of Playwright.
+- [Steel](https://github.com/steel-dev/steel-browser) 🆓 ★ 7.9k - Open-source browser API for agents with session management.
 
 ## Document Conversion
 
 _Turn PDFs, Office files, and other formats into text an LLM can read._
 
-- [Docling](https://github.com/docling-project/docling) 🆓 - Document parsing with layout and table understanding.
-- [MarkItDown](https://github.com/microsoft/markitdown) 🆓 🔌 - Converts Office files, PDFs, and more to Markdown for LLMs.
-- [Pandoc](https://github.com/jgm/pandoc) 🆓 - Universal document converter.
+- [Docling](https://github.com/docling-project/docling) 🆓 ★ 69.6k - Document parsing with layout and table understanding.
+- [MarkItDown](https://github.com/microsoft/markitdown) 🆓 🔌 ★ 192k - Converts Office files, PDFs, and more to Markdown for LLMs.
+- [Pandoc](https://github.com/jgm/pandoc) 🆓 ★ 46.7k - Universal document converter.
 
 ## JSON & Text Processing
 
 _Filter, reshape, and search tool output inside a pipeline._
 
-- [jc](https://github.com/kellyjonbrazil/jc) 🆓 - Converts legacy CLI output into JSON.
-- [jq](https://github.com/jqlang/jq) 🆓 - Command-line JSON processor.
-- [Miller](https://github.com/johnkerl/miller) 🆓 - Like awk/sed for CSV, TSV, and JSON.
-- [ripgrep](https://github.com/BurntSushi/ripgrep) 🆓 - Fast recursive search with `--json` output.
-- [yq](https://github.com/mikefarah/yq) 🆓 - Like jq, but for YAML, XML, and TOML.
+- [jc](https://github.com/kellyjonbrazil/jc) 🆓 ★ 8.7k - Converts legacy CLI output into JSON.
+- [jq](https://github.com/jqlang/jq) 🆓 ★ 35.9k - Command-line JSON processor.
+- [Miller](https://github.com/johnkerl/miller) 🆓 ★ 10.1k - Like awk/sed for CSV, TSV, and JSON.
+- [ripgrep](https://github.com/BurntSushi/ripgrep) 🆓 ★ 69.4k - Fast recursive search with `--json` output.
+- [yq](https://github.com/mikefarah/yq) 🆓 ★ 16.2k - Like jq, but for YAML, XML, and TOML.
 
 ## Data & Query
 
 _Run SQL over files and API results without a database server._
 
-- [DuckDB](https://github.com/duckdb/duckdb) 🆓 - In-process SQL over CSV, Parquet, and JSON; `-json` output mode.
+- [DuckDB](https://github.com/duckdb/duckdb) 🆓 ★ 42.5k - In-process SQL over CSV, Parquet, and JSON; `-json` output mode.
 - [SQLite](https://sqlite.org) 🆓 - Embedded SQL database; `sqlite3 -json` returns structured query results.
 
 ## Sandboxes & Execution
 
 _Run agent-generated code where it can't damage the host._
 
-- [AIO Sandbox](https://github.com/agent-infra/sandbox) 🆓 🔌 - Browser, shell, file system, VS Code Server, and MCP in a single Docker container.
-- [Cloudflare Sandbox SDK](https://github.com/cloudflare/sandbox-sdk) 💲 - Isolated containers on Cloudflare's network, controlled from Workers.
-- [E2B](https://github.com/e2b-dev/E2B) 🆓 💲 - Secure cloud sandboxes for running AI-generated code.
-- [microsandbox](https://github.com/superradcompany/microsandbox) 🆓 - Local-first microVM runtime for running untrusted code.
-- [Modal](https://github.com/modal-labs/modal-client) 💲 - Programmatic containers with optional GPUs via Modal Sandboxes.
-- [OpenSandbox](https://github.com/opensandbox-group/OpenSandbox) 🆓 - Self-hosted sandbox runtime for AI agents.
-- [sandbox-runtime](https://github.com/anthropics/sandbox-runtime) 🆓 - OS-level filesystem and network restrictions for any process, no container required.
-- [Vercel Sandbox](https://github.com/vercel/sandbox) 💲 - Ephemeral Firecracker microVMs for untrusted code, with SDK and CLI.
+- [AIO Sandbox](https://github.com/agent-infra/sandbox) 🆓 🔌 ★ 6.2k - Browser, shell, file system, VS Code Server, and MCP in a single Docker container.
+- [Cloudflare Sandbox SDK](https://github.com/cloudflare/sandbox-sdk) 💲 ★ 1.2k - Isolated containers on Cloudflare's network, controlled from Workers.
+- [E2B](https://github.com/e2b-dev/E2B) 🆓 💲 ★ 14.5k - Secure cloud sandboxes for running AI-generated code.
+- [microsandbox](https://github.com/superradcompany/microsandbox) 🆓 ★ 8.8k - Local-first microVM runtime for running untrusted code.
+- [Modal](https://github.com/modal-labs/modal-client) 💲 ★ 528 - Programmatic containers with optional GPUs via Modal Sandboxes.
+- [OpenSandbox](https://github.com/opensandbox-group/OpenSandbox) 🆓 ★ 16.2k - Self-hosted sandbox runtime for AI agents.
+- [sandbox-runtime](https://github.com/anthropics/sandbox-runtime) 🆓 ★ 6.6k - OS-level filesystem and network restrictions for any process, no container required.
+- [Vercel Sandbox](https://github.com/vercel/sandbox) 💲 ★ 215 - Ephemeral Firecracker microVMs for untrusted code, with SDK and CLI.
 
 ## Developer Workflow
 
 _Operate repositories, CI, and project tasks from the command line._
 
-- [gh](https://github.com/cli/cli) 🆓 🔌 - GitHub CLI with `--json` and `--jq` on most commands.
-- [glab](https://gitlab.com/gitlab-org/cli) 🆓 - GitLab CLI with JSON output.
-- [just](https://github.com/casey/just) 🆓 - Command runner; `just --list` lets agents discover project tasks.
+- [gh](https://github.com/cli/cli) 🆓 🔌 ★ 46.7k - GitHub CLI with `--json` and `--jq` on most commands.
+- [glab](https://gitlab.com/gitlab-org/cli) 🆓 ★ 1.1k - GitLab CLI with JSON output.
+- [just](https://github.com/casey/just) 🆓 ★ 36.4k - Command runner; `just --list` lets agents discover project tasks.
 
 ## MCP Servers
 
 _Standalone servers that expose a tool over the Model Context Protocol. Tools that ship their own MCP server are also tagged 🔌 above._
 
-- [GitHub MCP Server](https://github.com/github/github-mcp-server) 🆓 - Official GitHub MCP server.
-- [Playwright MCP](https://github.com/microsoft/playwright-mcp) 🆓 - Browser automation via accessibility snapshots.
+- [GitHub MCP Server](https://github.com/github/github-mcp-server) 🆓 ★ 33.9k - Official GitHub MCP server.
+- [Playwright MCP](https://github.com/microsoft/playwright-mcp) 🆓 ★ 38.6k - Browser automation via accessibility snapshots.
 
 ## Related Lists
 
-- [awesome-agent-native-services](https://github.com/haoruilee/awesome-agent-native-services) - Services designed for agents from the ground up.
-- [awesome-ai-agents](https://github.com/e2b-dev/awesome-ai-agents) - Directory of AI agents.
-- [awesome-cli-coding-agents](https://github.com/bradAGI/awesome-cli-coding-agents) - Terminal-native coding agents.
+- [awesome-agent-native-services](https://github.com/haoruilee/awesome-agent-native-services) ★ 325 - Services designed for agents from the ground up.
+- [awesome-ai-agents](https://github.com/e2b-dev/awesome-ai-agents) ★ 30.6k - Directory of AI agents.
+- [awesome-cli-coding-agents](https://github.com/bradAGI/awesome-cli-coding-agents) ★ 1.4k - Terminal-native coding agents.
 
 ## Contributing
 
