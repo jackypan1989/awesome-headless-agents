@@ -167,6 +167,7 @@ _Find sources. Hosted APIs that return ranked results as JSON._
 
 - [Brave Search API](https://brave.com/search/api/) 💲 🔌 - Independent web index via API.
 - [Exa](https://exa.ai) 💲 🔌 - Neural search API with content retrieval.
+- [SearXNG](https://github.com/searxng/searxng) 🆓 ★ 38.8k - Self-hosted metasearch engine; its search API returns JSON with `format=json` once enabled.
 - [Tavily](https://tavily.com) 💲 🔌 - Search API designed for agents and RAG.
 
 ## Web Fetch & Extraction
@@ -174,7 +175,9 @@ _Find sources. Hosted APIs that return ranked results as JSON._
 _Turn a URL into clean Markdown or structured data without driving a browser._
 
 - [Crawl4AI](https://github.com/unclecode/crawl4ai) 🆓 ★ 86.2k - LLM-friendly crawler that outputs clean Markdown.
+- [Crawlee](https://github.com/apify/crawlee) 🆓 ★ 26.3k - Crawling and scraping library for Node.js and Python that stores results as JSON datasets.
 - [Firecrawl](https://github.com/firecrawl/firecrawl) 🆓 💲 🔌 ★ 195k - Turns websites into LLM-ready Markdown or structured data.
+- [httpx](https://github.com/projectdiscovery/httpx) 🆓 ★ 10.5k - HTTP toolkit that probes URLs at scale; `-json` writes JSON Lines.
 - [Jina Reader](https://github.com/jina-ai/reader) 🆓 💲 ★ 12.2k - Prefix any URL to get LLM-friendly content.
 - [Katana](https://github.com/projectdiscovery/katana) 🆓 ★ 17.7k - Fast crawling and spidering framework with JSON output.
 - [Trafilatura](https://github.com/adbar/trafilatura) 🆓 ★ 7k - Main-text extraction from web pages; CLI and Python.
@@ -186,6 +189,7 @@ _Browser engines that run with no display._
 
 - [Chrome Headless Shell](https://developer.chrome.com/docs/automation-and-testing/headless-chrome-shell) 🆓 - The standalone headless build of Chromium.
 - [Lightpanda](https://github.com/lightpanda-io/browser) 🆓 ★ 37k - Headless browser written from scratch in Zig for AI and automation; CDP-compatible with a fraction of Chrome's memory.
+- [Moli](https://github.com/lexmount/moli) 🆓 ★ 20.6k - Headless browser for AI agents written in Rust; one endpoint serves CDP, WebDriver Classic, and WebDriver BiDi.
 
 ## Browser Automation
 
@@ -194,6 +198,7 @@ _Drive a browser when fetching isn't enough: logins, JavaScript-heavy pages, mul
 - [agent-browser](https://github.com/vercel-labs/agent-browser) 🆓 ★ 44.6k - Browser automation CLI built for AI agents.
 - [Browser Use](https://github.com/browser-use/browser-use) 🆓 ★ 119k - Makes websites accessible to AI agents.
 - [Browserbase](https://www.browserbase.com) 💲 - Hosted headless browser infrastructure.
+- [chromedp](https://github.com/chromedp/chromedp) 🆓 ★ 13.3k - Go library that drives Chrome over the DevTools Protocol, headless by default.
 - [Playwright](https://github.com/microsoft/playwright) 🆓 🔌 ★ 98.5k - Cross-browser automation; the de facto foundation for most agent browser layers.
 - [Puppeteer](https://github.com/puppeteer/puppeteer) 🆓 ★ 95.7k - JavaScript API for headless Chrome and Firefox.
 - [Stagehand](https://github.com/browserbase/stagehand) 🆓 ★ 25.8k - SDK for browser agents on top of Playwright.
@@ -204,13 +209,16 @@ _Drive a browser when fetching isn't enough: logins, JavaScript-heavy pages, mul
 _Turn PDFs, Office files, and other formats into text an LLM can read._
 
 - [Docling](https://github.com/docling-project/docling) 🆓 ★ 69.6k - Document parsing with layout and table understanding.
+- [Marker](https://github.com/datalab-to/marker) 🆓 ★ 40.6k - Converts PDFs and documents to Markdown, HTML, or JSON via `--output_format`.
 - [MarkItDown](https://github.com/microsoft/markitdown) 🆓 🔌 ★ 192k - Converts Office files, PDFs, and more to Markdown for LLMs.
+- [MinerU](https://github.com/opendatalab/MinerU) 🆓 ★ 82.5k - Parses PDFs into LLM-ready Markdown; `mineru parse --json` for structured output.
 - [Pandoc](https://github.com/jgm/pandoc) 🆓 ★ 46.7k - Universal document converter.
 
 ## JSON & Text Processing
 
 _Filter, reshape, and search tool output inside a pipeline._
 
+- [ast-grep](https://github.com/ast-grep/ast-grep) 🆓 ★ 16.3k - Structural code search and rewrite over syntax trees, with `--json` output.
 - [jc](https://github.com/kellyjonbrazil/jc) 🆓 ★ 8.7k - Converts legacy CLI output into JSON.
 - [jq](https://github.com/jqlang/jq) 🆓 ★ 35.9k - Command-line JSON processor.
 - [Miller](https://github.com/johnkerl/miller) 🆓 ★ 10.1k - Like awk/sed for CSV, TSV, and JSON.
@@ -221,8 +229,10 @@ _Filter, reshape, and search tool output inside a pipeline._
 
 _Run SQL over files and API results without a database server._
 
+- [Datasette](https://github.com/simonw/datasette) 🆓 ★ 11.5k - Serves SQLite databases with a JSON API for every table and query.
 - [DuckDB](https://github.com/duckdb/duckdb) 🆓 ★ 42.5k - In-process SQL over CSV, Parquet, and JSON; `-json` output mode.
 - [SQLite](https://sqlite.org) 🆓 - Embedded SQL database; `sqlite3 -json` returns structured query results.
+- [Steampipe](https://github.com/turbot/steampipe) 🆓 ★ 8k - Queries cloud and SaaS APIs with SQL; `--output json` for results.
 
 ## Sandboxes & Execution
 
@@ -241,15 +251,21 @@ _Run agent-generated code where it can't damage the host._
 
 _Operate repositories, CI, and project tasks from the command line._
 
+- [act](https://github.com/nektos/act) 🆓 ★ 72.4k - Runs GitHub Actions workflows locally in containers, with `--json` log output.
 - [gh](https://github.com/cli/cli) 🆓 🔌 ★ 46.7k - GitHub CLI with `--json` and `--jq` on most commands.
 - [glab](https://gitlab.com/gitlab-org/cli) 🆓 ★ 1.1k - GitLab CLI with JSON output.
 - [just](https://github.com/casey/just) 🆓 ★ 36.4k - Command runner; `just --list` lets agents discover project tasks.
+- [Task](https://github.com/go-task/task) 🆓 ★ 16.3k - YAML-based task runner; `task --list --json` lets agents discover tasks.
+- [uv](https://github.com/astral-sh/uv) 🆓 ★ 91.1k - Fast Python package manager; `uvx` runs any Python CLI in a throwaway environment.
 
 ## MCP Servers
 
 _Standalone servers that expose a tool over the Model Context Protocol. Tools that ship their own MCP server are also tagged 🔌 above._
 
+- [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) 🆓 ★ 54.1k - Chrome DevTools for agents: debugging, performance traces, and automation, with a `--headless` option.
+- [Context7](https://github.com/upstash/context7) 🆓 💲 ★ 63.6k - Up-to-date, version-specific library documentation for LLMs.
 - [GitHub MCP Server](https://github.com/github/github-mcp-server) 🆓 ★ 33.9k - Official GitHub MCP server.
+- [MCP Reference Servers](https://github.com/modelcontextprotocol/servers) 🆓 ★ 91.6k - Official reference servers for filesystem, Git, fetch, memory, and more.
 - [Playwright MCP](https://github.com/microsoft/playwright-mcp) 🆓 ★ 38.6k - Browser automation via accessibility snapshots.
 
 ## Related Lists
