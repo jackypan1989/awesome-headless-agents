@@ -13,10 +13,15 @@ Most "awesome agent" lists catalog the agents themselves. This one catalogs what
 - [Headless Browsers](#headless-browsers)
 - [Browser Automation](#browser-automation)
 - [Document Conversion](#document-conversion)
+- [Media & Speech](#media--speech)
 - [JSON & Text Processing](#json--text-processing)
 - [Data & Query](#data--query)
+- [Storage & Transfer](#storage--transfer)
+- [Secrets & Auth](#secrets--auth)
 - [Sandboxes & Execution](#sandboxes--execution)
 - [Developer Workflow](#developer-workflow)
+- [Cloud & Infra CLIs](#cloud--infra-clis)
+- [Notifications](#notifications)
 - [MCP Servers](#mcp-servers)
 
 ## Inclusion Criteria
@@ -214,6 +219,14 @@ _Turn PDFs, Office files, and other formats into text an LLM can read._
 - [MinerU](https://github.com/opendatalab/MinerU) 🆓 ★ 82.5k - Parses PDFs into LLM-ready Markdown; `mineru parse --json` for structured output.
 - [Pandoc](https://github.com/jgm/pandoc) 🆓 ★ 46.7k - Universal document converter.
 
+## Media & Speech
+
+_Download, inspect, and transcribe audio and video._
+
+- [FFmpeg](https://github.com/FFmpeg/FFmpeg) 🆓 ★ 65.7k - Converts and processes audio and video; `ffprobe -of json` reports stream metadata.
+- [whisper.cpp](https://github.com/ggml-org/whisper.cpp) 🆓 ★ 54.7k - Local speech-to-text in C/C++; `--output-json` writes timestamped transcripts.
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp) 🆓 ★ 202k - Downloads audio and video from thousands of sites; `-J` dumps metadata as JSON.
+
 ## JSON & Text Processing
 
 _Filter, reshape, and search tool output inside a pipeline._
@@ -233,6 +246,22 @@ _Run SQL over files and API results without a database server._
 - [DuckDB](https://github.com/duckdb/duckdb) 🆓 ★ 42.5k - In-process SQL over CSV, Parquet, and JSON; `-json` output mode.
 - [SQLite](https://sqlite.org) 🆓 - Embedded SQL database; `sqlite3 -json` returns structured query results.
 - [Steampipe](https://github.com/turbot/steampipe) 🆓 ★ 8k - Queries cloud and SaaS APIs with SQL; `--output json` for results.
+
+## Storage & Transfer
+
+_Move files between local disks and cloud storage._
+
+- [rclone](https://github.com/rclone/rclone) 🆓 ★ 60.5k - Syncs files with dozens of cloud storage providers; `rclone lsjson` lists objects as JSON.
+- [restic](https://github.com/restic/restic) 🆓 ★ 36.8k - Encrypted, deduplicated backups to local or cloud storage, with `--json` output.
+
+## Secrets & Auth
+
+_Hand credentials to agents without a browser login._
+
+- [age](https://github.com/FiloSottile/age) 🆓 ★ 24.1k - Simple file encryption with small explicit keys, designed for scripting.
+- [Infisical](https://github.com/Infisical/infisical) 🆓 💲 ★ 30k - Secrets manager; `infisical export --format=json` or `infisical run` injects secrets into a process.
+- [OpenBao](https://github.com/openbao/openbao) 🆓 ★ 8.7k - Open-source fork of HashiCorp Vault for secrets management, with `-format=json` output.
+- [SOPS](https://github.com/getsops/sops) 🆓 ★ 23.5k - Encrypts values inside YAML, JSON, and ENV files; `sops -d` decrypts in scripts.
 
 ## Sandboxes & Execution
 
@@ -257,6 +286,21 @@ _Operate repositories, CI, and project tasks from the command line._
 - [just](https://github.com/casey/just) 🆓 ★ 36.4k - Command runner; `just --list` lets agents discover project tasks.
 - [Task](https://github.com/go-task/task) 🆓 ★ 16.3k - YAML-based task runner; `task --list --json` lets agents discover tasks.
 - [uv](https://github.com/astral-sh/uv) 🆓 ★ 91.1k - Fast Python package manager; `uvx` runs any Python CLI in a throwaway environment.
+
+## Cloud & Infra CLIs
+
+_Provision and inspect infrastructure with machine-readable plans and state._
+
+- [AWS CLI](https://github.com/aws/aws-cli) 🆓 ★ 17.3k - Command-line interface for AWS; `--output json` and `--query` on every command.
+- [kubectl](https://github.com/kubernetes/kubectl) 🆓 ★ 3.4k - Kubernetes CLI; `-o json` returns full resource objects.
+- [OpenTofu](https://github.com/opentofu/opentofu) 🆓 ★ 30.6k - Open-source Terraform fork; `tofu plan -json` and `tofu show -json` for machine-readable plans.
+
+## Notifications
+
+_Report results back to humans when the job is done._
+
+- [Apprise](https://github.com/caronc/apprise) 🆓 ★ 17.6k - One CLI and API for notifications to Slack, Discord, email, SMS, and many more services.
+- [ntfy](https://github.com/binwiederhier/ntfy) 🆓 💲 ★ 35.1k - Push notifications to phone or desktop with a plain HTTP POST; self-hostable.
 
 ## MCP Servers
 
