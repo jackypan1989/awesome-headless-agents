@@ -1,4 +1,4 @@
-# Awesome Headless Agents [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome Headless Agents [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![GitHub stars](https://img.shields.io/github/stars/jackypan1989/awesome-headless-agents?style=social)](https://github.com/jackypan1989/awesome-headless-agents/stargazers)
 
 > A curated list of tools that AI agents can operate **without a GUI** — CLIs, headless browsers, APIs, sandboxes, and MCP servers that work unattended, with no TTY and no human clicking "OK".
 
