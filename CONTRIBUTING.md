@@ -21,6 +21,7 @@ Confirm the tool passes the **headless test**:
 
 - Separate the name (and tags) from the description with ` - `, not an em dash.
 - Use tags: 🆓 open source · 💲 paid / hosted · 🔌 has an MCP server
+- Don't add a ★ star count; a weekly workflow fills it in.
 - Describe what it does **for an agent**, not marketing copy.
 - Keep entries alphabetical within a section unless the section notes otherwise.
 - One tool per PR.
