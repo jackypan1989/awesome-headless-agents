@@ -276,6 +276,15 @@ _Run agent-generated code where it can't damage the host._
 - [sandbox-runtime](https://github.com/anthropics/sandbox-runtime) 🆓 ★ 6.6k - OS-level filesystem and network restrictions for any process, no container required.
 - [Vercel Sandbox](https://github.com/vercel/sandbox) 💲 ★ 215 - Ephemeral Firecracker microVMs for untrusted code, with SDK and CLI.
 
+### Isolation Primitives
+
+_Lower-level isolation that sandboxes like the ones above are built on._
+
+- [bubblewrap](https://github.com/containers/bubblewrap) 🆓 ★ 9.2k - Unprivileged Linux sandboxing tool used by Flatpak.
+- [Firecracker](https://github.com/firecracker-microvm/firecracker) 🆓 ★ 37.6k - Lightweight microVM monitor behind AWS Lambda and several agent sandboxes.
+- [gVisor](https://github.com/google/gvisor) 🆓 ★ 19.8k - User-space application kernel that isolates containers from the host.
+- [nsjail](https://github.com/google/nsjail) 🆓 ★ 4.2k - Process isolation with Linux namespaces, cgroups, rlimits, and seccomp-bpf filters.
+
 ## Developer Workflow
 
 _Operate repositories, CI, and project tasks from the command line._
