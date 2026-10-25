@@ -267,12 +267,16 @@ _Hand credentials to agents without a browser login._
 
 _Run agent-generated code where it can't damage the host._
 
+- [Agent Sandbox](https://github.com/kubernetes-sigs/agent-sandbox) 🆓 ★ 4.4k - Kubernetes controller for isolated, stateful sandbox pods for agent runtimes, with gVisor or Kata isolation.
 - [AIO Sandbox](https://github.com/agent-infra/sandbox) 🆓 🔌 ★ 6.2k - Browser, shell, file system, VS Code Server, and MCP in a single Docker container.
 - [Cloudflare Sandbox SDK](https://github.com/cloudflare/sandbox-sdk) 💲 ★ 1.2k - Isolated containers on Cloudflare's network, controlled from Workers.
+- [container-use](https://github.com/dagger/container-use) 🆓 🔌 ★ 4.1k - Gives each coding agent its own container and Git branch through an MCP server.
 - [E2B](https://github.com/e2b-dev/E2B) 🆓 💲 ★ 14.6k - Secure cloud sandboxes for running AI-generated code.
+- [Judge0](https://github.com/judge0/judge0) 🆓 💲 ★ 4.5k - Self-hostable code execution API for 60+ languages with JSON requests and results.
 - [microsandbox](https://github.com/superradcompany/microsandbox) 🆓 ★ 8.8k - Local-first microVM runtime for running untrusted code.
 - [Modal](https://github.com/modal-labs/modal-client) 💲 ★ 528 - Programmatic containers with optional GPUs via Modal Sandboxes.
 - [OpenSandbox](https://github.com/opensandbox-group/OpenSandbox) 🆓 ★ 16.2k - Self-hosted sandbox runtime for AI agents.
+- [Pyodide](https://github.com/pyodide/pyodide) 🆓 ★ 14.9k - CPython in WebAssembly, for running Python inside Node.js or a browser without host access.
 - [sandbox-runtime](https://github.com/anthropics/sandbox-runtime) 🆓 ★ 6.6k - OS-level filesystem and network restrictions for any process, no container required.
 - [Vercel Sandbox](https://github.com/vercel/sandbox) 💲 ★ 215 - Ephemeral Firecracker microVMs for untrusted code, with SDK and CLI.
 
@@ -281,9 +285,13 @@ _Run agent-generated code where it can't damage the host._
 _Lower-level isolation that sandboxes like the ones above are built on._
 
 - [bubblewrap](https://github.com/containers/bubblewrap) 🆓 ★ 9.2k - Unprivileged Linux sandboxing tool used by Flatpak.
+- [Deno](https://github.com/denoland/deno) 🆓 ★ 109k - JavaScript and TypeScript runtime that denies file, network, and env access unless granted with `--allow-*` flags.
 - [Firecracker](https://github.com/firecracker-microvm/firecracker) 🆓 ★ 37.6k - Lightweight microVM monitor behind AWS Lambda and several agent sandboxes.
 - [gVisor](https://github.com/google/gvisor) 🆓 ★ 19.8k - User-space application kernel that isolates containers from the host.
+- [Kata Containers](https://github.com/kata-containers/kata-containers) 🆓 ★ 9k - OCI containers that each run in a lightweight VM with its own kernel.
 - [nsjail](https://github.com/google/nsjail) 🆓 ★ 4.2k - Process isolation with Linux namespaces, cgroups, rlimits, and seccomp-bpf filters.
+- [Podman](https://github.com/podman-container-tools/podman) 🆓 ★ 33.1k - Daemonless, rootless OCI containers; `--format json` on inspect and list commands.
+- [Wasmtime](https://github.com/bytecodealliance/wasmtime) 🆓 ★ 18.8k - WebAssembly runtime whose WASI modules only see the directories and sockets you grant.
 
 ## Developer Workflow
 
@@ -315,11 +323,17 @@ _Report results back to humans when the job is done._
 
 _Standalone servers that expose a tool over the Model Context Protocol. Tools that ship their own MCP server are also tagged 🔌 above._
 
+- [AWS MCP Servers](https://github.com/awslabs/mcp) 🆓 ★ 9.8k - Official MCP servers for AWS documentation, APIs, and individual services.
 - [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) 🆓 ★ 54.1k - Chrome DevTools for agents: debugging, performance traces, and automation, with a `--headless` option.
+- [Cloudflare MCP Servers](https://github.com/cloudflare/mcp-server-cloudflare) 🆓 ★ 4.4k - Official MCP servers for Workers, DNS, observability, and other Cloudflare products.
 - [Context7](https://github.com/upstash/context7) 🆓 💲 ★ 63.7k - Up-to-date, version-specific library documentation for LLMs.
 - [GitHub MCP Server](https://github.com/github/github-mcp-server) 🆓 ★ 33.9k - Official GitHub MCP server.
+- [Grafana MCP](https://github.com/grafana/mcp-grafana) 🆓 ★ 3.6k - Queries Grafana dashboards, Prometheus, Loki, alerts, and incidents.
+- [MCP Inspector](https://github.com/modelcontextprotocol/inspector) 🆓 ★ 11.1k - Tests MCP servers; `--cli` mode lists and calls tools from scripts.
 - [MCP Reference Servers](https://github.com/modelcontextprotocol/servers) 🆓 ★ 91.6k - Official reference servers for filesystem, Git, fetch, memory, and more.
 - [Playwright MCP](https://github.com/microsoft/playwright-mcp) 🆓 ★ 38.6k - Browser automation via accessibility snapshots.
+- [Serena](https://github.com/oraios/serena) 🆓 ★ 30.7k - Semantic code search and symbol-level editing backed by language servers.
+- [Supabase MCP](https://github.com/supabase/mcp) 🆓 ★ 3k - Manages Supabase projects, runs SQL, and reads logs through MCP.
 
 ## Related Lists
 
