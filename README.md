@@ -7,6 +7,7 @@ Most "awesome agent" lists catalog the agents themselves. This one catalogs what
 ## Contents
 
 - [Inclusion Criteria](#inclusion-criteria)
+- [Toolchains](#toolchains)
 - [Headless Browsers](#headless-browsers)
 - [Browser Automation for Agents](#browser-automation-for-agents)
 - [Web Fetch & Extraction](#web-fetch--extraction)
@@ -32,6 +33,56 @@ A tool belongs here only if it passes the **headless test**:
 Excluded: GUI-first apps with a thin CLI wrapper, the agents themselves (see [Related Lists](#related-lists)), and end-user products.
 
 **Legend:** 🆓 open source · 💲 paid / hosted · 🔌 has an MCP server
+
+## Toolchains
+
+Headless tools earn their place when they compose: each step reads text, writes structured output to stdout, and fails loudly. Run chains under `set -euo pipefail` so a failure anywhere stops the pipeline instead of handing the next tool empty input.
+
+### Web page → Markdown → matches as JSON
+
+[Jina Reader](https://github.com/jina-ai/reader) → [ripgrep](https://github.com/BurntSushi/ripgrep) → [jq](https://github.com/jqlang/jq)
+
+```sh
+curl -sf https://r.jina.ai/https://example.com > page.md
+rg --json -i 'domain' page.md \
+  | jq -c 'select(.type == "match") | {line: .data.line_number, text: .data.lines.text}'
+```
+
+### GitHub activity → SQL
+
+[gh](https://github.com/cli/cli) → [DuckDB](https://github.com/duckdb/duckdb)
+
+```sh
+gh pr list --repo cli/cli --state merged --limit 100 --json number,author,mergedAt > prs.json
+duckdb -json -c "SELECT author.login AS author, count(*) AS prs FROM 'prs.json' GROUP BY 1 ORDER BY 2 DESC LIMIT 5"
+```
+
+### Any document → searchable Markdown
+
+[MarkItDown](https://github.com/microsoft/markitdown) → [ripgrep](https://github.com/BurntSushi/ripgrep) → [jq](https://github.com/jqlang/jq)
+
+```sh
+markitdown quarterly-report.pdf -o report.md
+rg --json -i 'revenue' report.md | jq -c 'select(.type == "match") | .data.lines.text'
+```
+
+### Legacy CLI output → JSON
+
+[jc](https://github.com/kellyjonbrazil/jc) → [jq](https://github.com/jqlang/jq)
+
+```sh
+dig example.com | jc --dig | jq -r '.[].answer[].data'
+```
+
+### Agent-generated code → restricted execution
+
+[sandbox-runtime](https://github.com/anthropics/sandbox-runtime)
+
+```sh
+srt --settings srt-settings.json python3 generated.py
+```
+
+Filesystem and network access outside the allowlist in `srt-settings.json` is blocked at the OS level, so a misbehaving script fails instead of reaching your files or the internet.
 
 ## Headless Browsers
 
