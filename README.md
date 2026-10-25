@@ -39,6 +39,18 @@ Excluded: GUI-first apps with a thin CLI wrapper, the agents themselves (see [Re
 
 Headless tools earn their place when they compose: each step reads text, writes structured output to stdout, and fails loudly. Run chains under `set -euo pipefail` so a failure anywhere stops the pipeline instead of handing the next tool empty input.
 
+### Search → read the top results
+
+**Tools:** Tavily → jq → Jina Reader
+
+```sh
+curl -sf https://api.tavily.com/search \
+  -H "Authorization: Bearer $TAVILY_API_KEY" -H 'Content-Type: application/json' \
+  -d '{"query": "headless browser for AI agents", "max_results": 3}' \
+  | jq -r '.results[].url' \
+  | xargs -I{} curl -sf https://r.jina.ai/{} > sources.md
+```
+
 ### Web page → Markdown → matches as JSON
 
 **Tools:** Jina Reader → ripgrep → jq
@@ -49,13 +61,13 @@ rg --json -i 'domain' page.md \
   | jq -c 'select(.type == "match") | {line: .data.line_number, text: .data.lines.text}'
 ```
 
-### GitHub activity → SQL
+### Article → metadata as JSON
 
-**Tools:** gh → DuckDB
+**Tools:** Trafilatura → jq
 
 ```sh
-gh pr list --repo cli/cli --state merged --limit 100 --json number,author,mergedAt > prs.json
-duckdb -json -c "SELECT author.login AS author, count(*) AS prs FROM 'prs.json' GROUP BY 1 ORDER BY 2 DESC LIMIT 5"
+trafilatura -u https://simonwillison.net/2024/Dec/31/llms-in-2024/ --json --with-metadata \
+  | jq '{title, author, date, chars: (.text | length)}'
 ```
 
 ### Any document → searchable Markdown
@@ -74,6 +86,70 @@ rg --json -i 'revenue' report.md | jq -c 'select(.type == "match") | .data.lines
 ```sh
 dig example.com | jc --dig | jq -r '.[].answer[].data'
 ```
+
+### Codebase → TODO inventory
+
+**Tools:** ripgrep → jq
+
+```sh
+rg --json 'TODO|FIXME' src \
+  | jq -s '[.[] | select(.type == "match") | .data.path.text]
+           | group_by(.) | map({file: .[0], count: length}) | sort_by(-.count)'
+```
+
+### GitHub activity → SQL
+
+**Tools:** gh → DuckDB
+
+```sh
+gh pr list --repo cli/cli --state merged --limit 100 --json number,author,mergedAt > prs.json
+duckdb -json -c "SELECT author.login AS author, count(*) AS prs FROM 'prs.json' GROUP BY 1 ORDER BY 2 DESC LIMIT 5"
+```
+
+### Remote Parquet → SQL, no download
+
+**Tools:** DuckDB
+
+```sh
+duckdb -json -c "SELECT l_returnflag, count(*) AS n
+  FROM 'https://shell.duckdb.org/data/tpch/0_01/parquet/lineitem.parquet' GROUP BY 1"
+```
+
+DuckDB reads Parquet, CSV, and JSON over HTTP(S) and S3 directly, fetching only the columns the query needs.
+
+### Failed CI run → error lines
+
+**Tools:** gh → ripgrep
+
+```sh
+run=$(gh run list --status failure --limit 1 --json databaseId --jq '.[0].databaseId')
+gh run view "$run" --log-failed | rg '##\[error\]|Error:'
+```
+
+### Markdown links → repository health
+
+**Tools:** ripgrep → gh → jq
+
+```sh
+rg -o 'github\.com/[^/)]+/[^/)#]+' README.md | sort -u | cut -d/ -f2- \
+  | while read -r repo; do
+      gh api "repos/$repo" \
+        | jq -c --arg want "$repo" '{want: $want, now: .full_name, archived, pushed_at}
+                                    | select(.archived or .now != .want)'
+    done
+```
+
+Prints only repositories that were archived or renamed, the check this list runs on itself.
+
+### Project tasks → JSON
+
+**Tools:** just → jq
+
+```sh
+just --dump --dump-format json | jq -r '.recipes | to_entries[] | "\(.key)\t\(.value.doc // "")"'
+```
+
+An agent can discover what a project lets it run, with each recipe's doc comment, before running anything.
 
 ### Agent-generated code → restricted execution
 
