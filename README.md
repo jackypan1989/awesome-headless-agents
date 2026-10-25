@@ -8,15 +8,15 @@ Most "awesome agent" lists catalog the agents themselves. This one catalogs what
 
 - [Inclusion Criteria](#inclusion-criteria)
 - [Toolchains](#toolchains)
-- [Headless Browsers](#headless-browsers)
-- [Browser Automation for Agents](#browser-automation-for-agents)
-- [Web Fetch & Extraction](#web-fetch--extraction)
 - [Search APIs](#search-apis)
+- [Web Fetch & Extraction](#web-fetch--extraction)
+- [Headless Browsers](#headless-browsers)
+- [Browser Automation](#browser-automation)
 - [Document Conversion](#document-conversion)
+- [JSON & Text Processing](#json--text-processing)
 - [Data & Query](#data--query)
-- [Structured Output CLIs](#structured-output-clis)
-- [Dev Platform CLIs](#dev-platform-clis)
 - [Sandboxes & Execution](#sandboxes--execution)
+- [Developer Workflow](#developer-workflow)
 - [MCP Servers](#mcp-servers)
 
 ## Inclusion Criteria
@@ -85,62 +85,72 @@ srt --settings srt-settings.json python3 generated.py
 
 Filesystem and network access outside the allowlist in `srt-settings.json` is blocked at the OS level, so a misbehaving script fails instead of reaching your files or the internet.
 
-## Headless Browsers
+## Search APIs
 
-- [Lightpanda](https://github.com/lightpanda-io/browser) 🆓 - Headless browser written from scratch in Zig for AI and automation; CDP-compatible with a fraction of Chrome's memory.
-- [Chrome Headless Shell](https://developer.chrome.com/docs/automation-and-testing/headless-chrome-shell) 🆓 - The standalone headless build of Chromium.
+_Find sources. Hosted APIs that return ranked results as JSON._
 
-## Browser Automation for Agents
-
-- [agent-browser](https://github.com/vercel-labs/agent-browser) 🆓 - Browser automation CLI built for AI agents.
-- [Browser Use](https://github.com/browser-use/browser-use) 🆓 - Makes websites accessible to AI agents.
-- [Stagehand](https://github.com/browserbase/stagehand) 🆓 - SDK for browser agents on top of Playwright.
-- [Playwright](https://github.com/microsoft/playwright) 🆓 🔌 - Cross-browser automation; the de facto foundation for most agent browser layers.
-- [Puppeteer](https://github.com/puppeteer/puppeteer) 🆓 - JavaScript API for headless Chrome and Firefox.
-- [Steel](https://github.com/steel-dev/steel-browser) 🆓 - Open-source browser API for agents with session management.
-- [Browserbase](https://www.browserbase.com) 💲 - Hosted headless browser infrastructure.
+- [Brave Search API](https://brave.com/search/api/) 💲 🔌 - Independent web index via API.
+- [Exa](https://exa.ai) 💲 🔌 - Neural search API with content retrieval.
+- [Tavily](https://tavily.com) 💲 🔌 - Search API designed for agents and RAG.
 
 ## Web Fetch & Extraction
 
+_Turn a URL into clean Markdown or structured data without driving a browser._
+
 - [Crawl4AI](https://github.com/unclecode/crawl4ai) 🆓 - LLM-friendly crawler that outputs clean Markdown.
 - [Firecrawl](https://github.com/firecrawl/firecrawl) 🆓 💲 🔌 - Turns websites into LLM-ready Markdown or structured data.
-- [Trafilatura](https://github.com/adbar/trafilatura) 🆓 - Main-text extraction from web pages; CLI and Python.
 - [Jina Reader](https://github.com/jina-ai/reader) 🆓 💲 - Prefix any URL to get LLM-friendly content.
 - [Katana](https://github.com/projectdiscovery/katana) 🆓 - Fast crawling and spidering framework with JSON output.
+- [Trafilatura](https://github.com/adbar/trafilatura) 🆓 - Main-text extraction from web pages; CLI and Python.
+- [xh](https://github.com/ducaale/xh) 🆓 - Friendly HTTP client; scriptable alternative to curl.
 
-## Search APIs
+## Headless Browsers
 
-- [Tavily](https://tavily.com) 💲 🔌 - Search API designed for agents and RAG.
-- [Exa](https://exa.ai) 💲 🔌 - Neural search API with content retrieval.
-- [Brave Search API](https://brave.com/search/api/) 💲 🔌 - Independent web index via API.
+_Browser engines that run with no display._
+
+- [Chrome Headless Shell](https://developer.chrome.com/docs/automation-and-testing/headless-chrome-shell) 🆓 - The standalone headless build of Chromium.
+- [Lightpanda](https://github.com/lightpanda-io/browser) 🆓 - Headless browser written from scratch in Zig for AI and automation; CDP-compatible with a fraction of Chrome's memory.
+
+## Browser Automation
+
+_Drive a browser when fetching isn't enough: logins, JavaScript-heavy pages, multi-step flows._
+
+- [agent-browser](https://github.com/vercel-labs/agent-browser) 🆓 - Browser automation CLI built for AI agents.
+- [Browser Use](https://github.com/browser-use/browser-use) 🆓 - Makes websites accessible to AI agents.
+- [Browserbase](https://www.browserbase.com) 💲 - Hosted headless browser infrastructure.
+- [Playwright](https://github.com/microsoft/playwright) 🆓 🔌 - Cross-browser automation; the de facto foundation for most agent browser layers.
+- [Puppeteer](https://github.com/puppeteer/puppeteer) 🆓 - JavaScript API for headless Chrome and Firefox.
+- [Stagehand](https://github.com/browserbase/stagehand) 🆓 - SDK for browser agents on top of Playwright.
+- [Steel](https://github.com/steel-dev/steel-browser) 🆓 - Open-source browser API for agents with session management.
 
 ## Document Conversion
 
-- [MarkItDown](https://github.com/microsoft/markitdown) 🆓 🔌 - Converts Office files, PDFs, and more to Markdown for LLMs.
+_Turn PDFs, Office files, and other formats into text an LLM can read._
+
 - [Docling](https://github.com/docling-project/docling) 🆓 - Document parsing with layout and table understanding.
+- [MarkItDown](https://github.com/microsoft/markitdown) 🆓 🔌 - Converts Office files, PDFs, and more to Markdown for LLMs.
 - [Pandoc](https://github.com/jgm/pandoc) 🆓 - Universal document converter.
+
+## JSON & Text Processing
+
+_Filter, reshape, and search tool output inside a pipeline._
+
+- [jc](https://github.com/kellyjonbrazil/jc) 🆓 - Converts legacy CLI output into JSON.
+- [jq](https://github.com/jqlang/jq) 🆓 - Command-line JSON processor.
+- [Miller](https://github.com/johnkerl/miller) 🆓 - Like awk/sed for CSV, TSV, and JSON.
+- [ripgrep](https://github.com/BurntSushi/ripgrep) 🆓 - Fast recursive search with `--json` output.
+- [yq](https://github.com/mikefarah/yq) 🆓 - Like jq, but for YAML, XML, and TOML.
 
 ## Data & Query
 
+_Run SQL over files and API results without a database server._
+
 - [DuckDB](https://github.com/duckdb/duckdb) 🆓 - In-process SQL over CSV, Parquet, and JSON; `-json` output mode.
 - [SQLite](https://sqlite.org) 🆓 - Embedded SQL database; `sqlite3 -json` returns structured query results.
-- [Miller](https://github.com/johnkerl/miller) 🆓 - Like awk/sed for CSV, TSV, and JSON.
-
-## Structured Output CLIs
-
-- [jq](https://github.com/jqlang/jq) 🆓 - Command-line JSON processor.
-- [yq](https://github.com/mikefarah/yq) 🆓 - Like jq, but for YAML, XML, and TOML.
-- [jc](https://github.com/kellyjonbrazil/jc) 🆓 - Converts legacy CLI output into JSON.
-- [ripgrep](https://github.com/BurntSushi/ripgrep) 🆓 - Fast recursive search with `--json` output.
-- [xh](https://github.com/ducaale/xh) 🆓 - Friendly HTTP client; scriptable alternative to curl.
-
-## Dev Platform CLIs
-
-- [gh](https://github.com/cli/cli) 🆓 🔌 - GitHub CLI with `--json` and `--jq` on most commands.
-- [glab](https://gitlab.com/gitlab-org/cli) 🆓 - GitLab CLI with JSON output.
-- [just](https://github.com/casey/just) 🆓 - Command runner; `just --list` lets agents discover project tasks.
 
 ## Sandboxes & Execution
+
+_Run agent-generated code where it can't damage the host._
 
 - [AIO Sandbox](https://github.com/agent-infra/sandbox) 🆓 🔌 - Browser, shell, file system, VS Code Server, and MCP in a single Docker container.
 - [Cloudflare Sandbox SDK](https://github.com/cloudflare/sandbox-sdk) 💲 - Isolated containers on Cloudflare's network, controlled from Workers.
@@ -152,10 +162,20 @@ Filesystem and network access outside the allowlist in `srt-settings.json` is bl
 - [sandbox-runtime](https://github.com/anthropics/sandbox-runtime) 🆓 - OS-level filesystem and network restrictions for any process, no container required.
 - [Vercel Sandbox](https://github.com/vercel/sandbox) 💲 - Ephemeral Firecracker microVMs for untrusted code, with SDK and CLI.
 
+## Developer Workflow
+
+_Operate repositories, CI, and project tasks from the command line._
+
+- [gh](https://github.com/cli/cli) 🆓 🔌 - GitHub CLI with `--json` and `--jq` on most commands.
+- [glab](https://gitlab.com/gitlab-org/cli) 🆓 - GitLab CLI with JSON output.
+- [just](https://github.com/casey/just) 🆓 - Command runner; `just --list` lets agents discover project tasks.
+
 ## MCP Servers
 
-- [Playwright MCP](https://github.com/microsoft/playwright-mcp) 🆓 - Browser automation via accessibility snapshots.
+_Standalone servers that expose a tool over the Model Context Protocol. Tools that ship their own MCP server are also tagged 🔌 above._
+
 - [GitHub MCP Server](https://github.com/github/github-mcp-server) 🆓 - Official GitHub MCP server.
+- [Playwright MCP](https://github.com/microsoft/playwright-mcp) 🆓 - Browser automation via accessibility snapshots.
 
 ## Related Lists
 
