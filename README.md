@@ -158,7 +158,6 @@ _Run agent-generated code where it can't damage the host._
 - [microsandbox](https://github.com/superradcompany/microsandbox) 🆓 - Local-first microVM runtime for running untrusted code.
 - [Modal](https://github.com/modal-labs/modal-client) 💲 - Programmatic containers with optional GPUs via Modal Sandboxes.
 - [OpenSandbox](https://github.com/opensandbox-group/OpenSandbox) 🆓 - Self-hosted sandbox runtime for AI agents.
-- [Runloop](https://github.com/runloopai/api-client-python) 💲 - Devboxes where agents run code, edit files, and expose ports.
 - [sandbox-runtime](https://github.com/anthropics/sandbox-runtime) 🆓 - OS-level filesystem and network restrictions for any process, no container required.
 - [Vercel Sandbox](https://github.com/vercel/sandbox) 💲 - Ephemeral Firecracker microVMs for untrusted code, with SDK and CLI.
 
@@ -179,7 +178,6 @@ _Standalone servers that expose a tool over the Model Context Protocol. Tools th
 
 ## Related Lists
 
-- [awesome-agent-cli](https://github.com/agentablesh/awesome-agent-cli) - CLI tools suited for agent workflows.
 - [awesome-agent-native-services](https://github.com/haoruilee/awesome-agent-native-services) - Services designed for agents from the ground up.
 - [awesome-ai-agents](https://github.com/e2b-dev/awesome-ai-agents) - Directory of AI agents.
 - [awesome-cli-coding-agents](https://github.com/bradAGI/awesome-cli-coding-agents) - Terminal-native coding agents.
