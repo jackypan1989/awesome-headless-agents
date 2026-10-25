@@ -11,13 +11,15 @@ Confirm the tool passes the **headless test**:
 - [ ] Predictable failure (non-zero exit codes or explicit errors)
 - [ ] Scriptable auth (env vars, token files — no forced browser login)
 - [ ] Meaningful activity within the last 12 months
+- [ ] At least 100 GitHub stars, or equivalent adoption (downloads, users) noted in the PR
 
 ## Entry format
 
 ```
-- [Name](link) 🆓 — One-line description, ending with a period.
+- [Name](link) 🆓 - One-line description, ending with a period.
 ```
 
+- Separate the name (and tags) from the description with ` - `, not an em dash.
 - Use tags: 🆓 open source · 💲 paid / hosted · 🔌 has an MCP server
 - Describe what it does **for an agent**, not marketing copy.
 - Keep entries alphabetical within a section unless the section notes otherwise.

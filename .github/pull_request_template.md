@@ -13,10 +13,11 @@ See [CONTRIBUTING.md](https://github.com/jackypan1989/awesome-headless-agents/bl
 - [ ] Predictable failure (non-zero exit codes or explicit errors)
 - [ ] Scriptable auth (env vars, token files — no forced browser login)
 - [ ] Meaningful activity within the last 12 months
+- [ ] At least 100 GitHub stars, or equivalent adoption (downloads, users) noted in the PR
 
 ## Entry
 
-- [ ] Follows the format: `- [Name](link) 🆓 — One-line description, ending with a period.`
+- [ ] Follows the format: `- [Name](link) 🆓 - One-line description, ending with a period.`
 - [ ] Tags are accurate (🆓 open source · 💲 paid / hosted · 🔌 has an MCP server)
 - [ ] Description says what it does **for an agent**, not marketing copy
 - [ ] Alphabetical within its section
