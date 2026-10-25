@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 concurrency:
   group: update-stars
@@ -23,7 +24,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit if changed
+      # main is protected by a ruleset that requires pull requests, so the
+      # update goes through a PR on bot/update-stars and is squash-merged.
+      - name: Open and merge a PR if changed
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if git diff --quiet README.md; then
             echo "Star counts unchanged."
@@ -31,5 +36,12 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -C bot/update-stars
           git commit -am "Update star counts"
-          git push
+          git push --force origin bot/update-stars
+          if [ -z "$(gh pr list --head bot/update-stars --state open --json number --jq '.[].number')" ]; then
+            gh pr create --base main --head bot/update-stars \
+              --title "Update star counts" \
+              --body "Weekly refresh by \`scripts/update_stars.py\`."
+          fi
+          gh pr merge bot/update-stars --squash --delete-branch
