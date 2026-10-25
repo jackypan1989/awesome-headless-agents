@@ -36,7 +36,7 @@ Excluded: GUI-first apps with a thin CLI wrapper, the agents themselves (see [Re
 ## Headless Browsers
 
 - [Lightpanda](https://github.com/lightpanda-io/browser) 🆓 — Headless browser written from scratch in Zig for AI and automation; CDP-compatible with a fraction of Chrome's memory.
-- [Chrome Headless Shell](https://developer.chrome.com/blog/chrome-headless-shell) 🆓 — The standalone headless build of Chromium.
+- [Chrome Headless Shell](https://developer.chrome.com/docs/automation-and-testing/headless-chrome-shell) 🆓 — The standalone headless build of Chromium.
 
 ## Browser Automation for Agents
 
@@ -51,7 +51,7 @@ Excluded: GUI-first apps with a thin CLI wrapper, the agents themselves (see [Re
 ## Web Fetch & Extraction
 
 - [Crawl4AI](https://github.com/unclecode/crawl4ai) 🆓 — LLM-friendly crawler that outputs clean Markdown.
-- [Firecrawl](https://github.com/mendableai/firecrawl) 🆓 💲 🔌 — Turns websites into LLM-ready Markdown or structured data.
+- [Firecrawl](https://github.com/firecrawl/firecrawl) 🆓 💲 🔌 — Turns websites into LLM-ready Markdown or structured data.
 - [Trafilatura](https://github.com/adbar/trafilatura) 🆓 — Main-text extraction from web pages; CLI and Python.
 - [Jina Reader](https://github.com/jina-ai/reader) 🆓 💲 — Prefix any URL to get LLM-friendly content.
 - [Katana](https://github.com/projectdiscovery/katana) 🆓 — Fast crawling and spidering framework with JSON output.
