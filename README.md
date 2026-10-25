@@ -91,7 +91,6 @@ Excluded: GUI-first apps with a thin CLI wrapper, the agents themselves (see [Re
 ## Sandboxes & Execution
 
 - [E2B](https://github.com/e2b-dev/E2B) 🆓 💲 — Secure cloud sandboxes for running AI-generated code.
-- [Daytona](https://github.com/daytonaio/daytona) 🆓 💲 — Elastic infrastructure for running AI-generated code.
 
 ## MCP Servers
 
