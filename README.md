@@ -179,7 +179,7 @@ _Find sources. Hosted APIs that return ranked results as JSON._
 
 _Turn a URL into clean Markdown or structured data without driving a browser._
 
-- [Crawl4AI](https://github.com/unclecode/crawl4ai) 🆓 ★ 86.2k - LLM-friendly crawler that outputs clean Markdown.
+- [Crawl4AI](https://github.com/unclecode/crawl4ai) 🆓 ★ 86.3k - LLM-friendly crawler that outputs clean Markdown.
 - [Crawlee](https://github.com/apify/crawlee) 🆓 ★ 26.3k - Crawling and scraping library for Node.js and Python that stores results as JSON datasets.
 - [Firecrawl](https://github.com/firecrawl/firecrawl) 🆓 💲 🔌 ★ 195k - Turns websites into LLM-ready Markdown or structured data.
 - [httpx](https://github.com/projectdiscovery/httpx) 🆓 ★ 10.5k - HTTP toolkit that probes URLs at scale; `-json` writes JSON Lines.
@@ -194,7 +194,7 @@ _Browser engines that run with no display._
 
 - [Chrome Headless Shell](https://developer.chrome.com/docs/automation-and-testing/headless-chrome-shell) 🆓 - The standalone headless build of Chromium.
 - [Lightpanda](https://github.com/lightpanda-io/browser) 🆓 ★ 37k - Headless browser written from scratch in Zig for AI and automation; CDP-compatible with a fraction of Chrome's memory.
-- [Moli](https://github.com/lexmount/moli) 🆓 ★ 20.6k - Headless browser for AI agents written in Rust; one endpoint serves CDP, WebDriver Classic, and WebDriver BiDi.
+- [Moli](https://github.com/lexmount/moli) 🆓 ★ 20.7k - Headless browser for AI agents written in Rust; one endpoint serves CDP, WebDriver Classic, and WebDriver BiDi.
 
 ## Browser Automation
 
@@ -269,7 +269,7 @@ _Run agent-generated code where it can't damage the host._
 
 - [AIO Sandbox](https://github.com/agent-infra/sandbox) 🆓 🔌 ★ 6.2k - Browser, shell, file system, VS Code Server, and MCP in a single Docker container.
 - [Cloudflare Sandbox SDK](https://github.com/cloudflare/sandbox-sdk) 💲 ★ 1.2k - Isolated containers on Cloudflare's network, controlled from Workers.
-- [E2B](https://github.com/e2b-dev/E2B) 🆓 💲 ★ 14.5k - Secure cloud sandboxes for running AI-generated code.
+- [E2B](https://github.com/e2b-dev/E2B) 🆓 💲 ★ 14.6k - Secure cloud sandboxes for running AI-generated code.
 - [microsandbox](https://github.com/superradcompany/microsandbox) 🆓 ★ 8.8k - Local-first microVM runtime for running untrusted code.
 - [Modal](https://github.com/modal-labs/modal-client) 💲 ★ 528 - Programmatic containers with optional GPUs via Modal Sandboxes.
 - [OpenSandbox](https://github.com/opensandbox-group/OpenSandbox) 🆓 ★ 16.2k - Self-hosted sandbox runtime for AI agents.
@@ -294,7 +294,7 @@ _Operate repositories, CI, and project tasks from the command line._
 - [glab](https://gitlab.com/gitlab-org/cli) 🆓 ★ 1.1k - GitLab CLI with JSON output.
 - [just](https://github.com/casey/just) 🆓 ★ 36.4k - Command runner; `just --list` lets agents discover project tasks.
 - [Task](https://github.com/go-task/task) 🆓 ★ 16.3k - YAML-based task runner; `task --list --json` lets agents discover tasks.
-- [uv](https://github.com/astral-sh/uv) 🆓 ★ 91.1k - Fast Python package manager; `uvx` runs any Python CLI in a throwaway environment.
+- [uv](https://github.com/astral-sh/uv) 🆓 ★ 91.2k - Fast Python package manager; `uvx` runs any Python CLI in a throwaway environment.
 
 ## Cloud & Infra CLIs
 
@@ -316,7 +316,7 @@ _Report results back to humans when the job is done._
 _Standalone servers that expose a tool over the Model Context Protocol. Tools that ship their own MCP server are also tagged 🔌 above._
 
 - [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) 🆓 ★ 54.1k - Chrome DevTools for agents: debugging, performance traces, and automation, with a `--headless` option.
-- [Context7](https://github.com/upstash/context7) 🆓 💲 ★ 63.6k - Up-to-date, version-specific library documentation for LLMs.
+- [Context7](https://github.com/upstash/context7) 🆓 💲 ★ 63.7k - Up-to-date, version-specific library documentation for LLMs.
 - [GitHub MCP Server](https://github.com/github/github-mcp-server) 🆓 ★ 33.9k - Official GitHub MCP server.
 - [MCP Reference Servers](https://github.com/modelcontextprotocol/servers) 🆓 ★ 91.6k - Official reference servers for filesystem, Git, fetch, memory, and more.
 - [Playwright MCP](https://github.com/microsoft/playwright-mcp) 🆓 ★ 38.6k - Browser automation via accessibility snapshots.
