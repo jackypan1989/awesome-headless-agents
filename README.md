@@ -105,6 +105,49 @@ rg --json 'TODO|FIXME' src \
            | group_by(.) | map({file: .[0], count: length}) | sort_by(-.count)'
 ```
 
+### Remote repository → one context file
+
+**Tools:** Repomix
+
+```sh
+npx repomix --remote jqlang/jq --include 'src/**/*.c,src/**/*.h' \
+  --compress --style markdown -o jq-context.md
+```
+
+Packs the matching files and a directory tree into one Markdown file an agent can read; `--compress` keeps signatures and drops function bodies.
+
+### Lint findings → counts per rule
+
+**Tools:** Ruff → jq
+
+```sh
+ruff check --exit-zero --output-format json . \
+  | jq 'group_by(.code) | map({code: .[0].code, count: length}) | sort_by(-.count)'
+```
+
+`--exit-zero` keeps findings from stopping the pipeline; drop it to fail on any finding.
+
+### Dependencies → high-severity CVEs
+
+**Tools:** Trivy → jq
+
+```sh
+trivy fs --quiet --format json --scanners vuln . \
+  | jq '[.Results[]?.Vulnerabilities[]? | select(.Severity == "HIGH" or .Severity == "CRITICAL")
+         | {pkg: .PkgName, id: .VulnerabilityID, fixed: .FixedVersion}]'
+```
+
+### Git history → leaked secrets
+
+**Tools:** Gitleaks → jq
+
+```sh
+gitleaks git . --redact --exit-code 0 --no-banner --report-format json --report-path - \
+  | jq '[.[] | {file: .File, line: .StartLine, rule: .RuleID, commit: .Commit[:7]}]'
+```
+
+`--redact` keeps the secrets themselves out of the report, so the output is safe to pass to a model.
+
 ### GitHub activity → SQL
 
 **Tools:** gh → DuckDB
@@ -125,6 +168,18 @@ duckdb -json -c "SELECT l_returnflag, count(*) AS n
 
 DuckDB reads Parquet, CSV, and JSON over HTTP(S) and S3 directly, fetching only the columns the query needs.
 
+### API responses → a local SQLite table
+
+**Tools:** gh → sqlite-utils
+
+```sh
+gh api 'repos/astral-sh/uv/releases?per_page=100' \
+  | sqlite-utils insert releases.db releases - --pk id --alter --replace
+sqlite-utils releases.db "SELECT tag_name, published_at FROM releases ORDER BY published_at DESC LIMIT 5"
+```
+
+`--replace` makes reruns safe, and later queries need no network.
+
 ### Failed CI run → error lines
 
 **Tools:** gh → ripgrep
@@ -133,6 +188,29 @@ DuckDB reads Parquet, CSV, and JSON over HTTP(S) and S3 directly, fetching only 
 run=$(gh run list --status failure --limit 1 --json databaseId --jq '.[0].databaseId')
 gh run view "$run" --log-failed | rg '##\[error\]|Error:'
 ```
+
+### Web page → CI gate on Lighthouse scores
+
+**Tools:** Lighthouse → jq
+
+```sh
+lighthouse https://example.com --output=json --quiet --only-categories=performance,accessibility \
+  --chrome-flags="--headless=new" \
+  | jq -e '.categories | map_values(.score) | (.performance >= 0.9 and .accessibility >= 0.9)'
+```
+
+`jq -e` exits non-zero when the expression is false, so a score drop fails the job.
+
+### Markdown links → broken URLs
+
+**Tools:** lychee → jq
+
+```sh
+lychee --format json --no-progress README.md > links.json || [ $? -eq 2 ]
+jq -c '.error_map[][] | {url, status: .status.text}' links.json
+```
+
+lychee exits 2 when it finds broken links; `|| [ $? -eq 2 ]` lets the script read the report while any other failure still stops it.
 
 ### Markdown links → repository health
 
