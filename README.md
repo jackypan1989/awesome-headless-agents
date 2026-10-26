@@ -320,9 +320,11 @@ _Drive a browser when fetching isn't enough: logins, JavaScript-heavy pages, mul
 - [Browserbase](https://www.browserbase.com) 💲 - Hosted headless browser infrastructure.
 - [chromedp](https://github.com/chromedp/chromedp) 🆓 ★ 13.3k - Go library that drives Chrome over the DevTools Protocol, headless by default.
 - [Playwright](https://github.com/microsoft/playwright) 🆓 🔌 ★ 98.5k - Cross-browser automation; the de facto foundation for most agent browser layers.
+- [Playwright CLI](https://github.com/microsoft/playwright-cli) 🆓 ★ 14.6k - Token-efficient Playwright commands for coding agents, with navigation, snapshots, and screenshots plus installable skills.
 - [Puppeteer](https://github.com/puppeteer/puppeteer) 🆓 ★ 95.7k - JavaScript API for headless Chrome and Firefox.
 - [Rod](https://github.com/go-rod/rod) 🆓 ★ 7.1k - Go driver for the Chrome DevTools Protocol with automatic waits and a headless default.
 - [Selenium](https://github.com/SeleniumHQ/selenium) 🆓 ★ 34.6k - WebDriver automation for every major browser, with bindings in many languages and Selenium Grid for remote runs.
+- [shot-scraper](https://github.com/simonw/shot-scraper) 🆓 ★ 2.6k - Takes screenshots from one command or a YAML file; `shot-scraper javascript` runs JS in a page and prints the result as JSON.
 - [Skyvern](https://github.com/Skyvern-AI/skyvern) 🆓 💲 🔌 ★ 23.3k - Automates browser workflows with LLMs and computer vision through an API.
 - [Stagehand](https://github.com/browserbase/stagehand) 🆓 ★ 25.8k - SDK for browser agents on top of Playwright.
 - [Steel](https://github.com/steel-dev/steel-browser) 🆓 ★ 7.9k - Open-source browser API for agents with session management.
@@ -492,6 +494,8 @@ _Test APIs, performance, accessibility, and links from the command line._
 - [Lighthouse](https://github.com/GoogleChrome/lighthouse) 🆓 ★ 30.9k - Audits performance, accessibility, and SEO in headless Chrome; `--output=json`.
 - [lychee](https://github.com/lycheeverse/lychee) 🆓 ★ 4k - Fast link checker for Markdown, HTML, and websites; `--format json`.
 - [Pa11y](https://github.com/pa11y/pa11y) 🆓 ★ 4.6k - Accessibility tests in headless Chrome; `--reporter json` and non-zero exit on issues.
+- [Prism](https://github.com/stoplightio/prism) 🆓 ★ 5.1k - Mock server and request validator generated from an OpenAPI document.
+- [WireMock](https://github.com/wiremock/wiremock) 🆓 💲 ★ 7.4k - HTTP mock server driven by JSON stub mappings and an admin API, for testing against fake services.
 
 ## Cloud & Infra CLIs
 
@@ -538,6 +542,7 @@ _Standalone servers that expose a tool over the Model Context Protocol. Tools th
 - [Grafana MCP](https://github.com/grafana/mcp-grafana) 🆓 ★ 3.6k - Queries Grafana dashboards, Prometheus, Loki, alerts, and incidents.
 - [MCP Inspector](https://github.com/modelcontextprotocol/inspector) 🆓 ★ 11.2k - Tests MCP servers; `--cli` mode lists and calls tools from scripts.
 - [MCP Reference Servers](https://github.com/modelcontextprotocol/servers) 🆓 ★ 91.6k - Official reference servers for filesystem, Git, fetch, memory, and more.
+- [mcporter](https://github.com/openclaw/mcporter) 🆓 ★ 5.1k - Calls MCP servers from the command line or TypeScript, and packages a server as a standalone CLI.
 - [Playwright MCP](https://github.com/microsoft/playwright-mcp) 🆓 ★ 38.6k - Browser automation via accessibility snapshots.
 - [Serena](https://github.com/oraios/serena) 🆓 ★ 30.7k - Semantic code search and symbol-level editing backed by language servers.
 - [Supabase MCP](https://github.com/supabase/mcp) 🆓 ★ 3k - Manages Supabase projects, runs SQL, and reads logs through MCP.
