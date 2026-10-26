@@ -14,6 +14,7 @@ Most "awesome agent" lists catalog the agents themselves. This one catalogs what
 - [Browser Automation](#browser-automation)
 - [Document Conversion](#document-conversion)
 - [Media & Speech](#media--speech)
+- [Rendering & Publishing](#rendering--publishing)
 - [JSON & Text Processing](#json--text-processing)
 - [Data & Query](#data--query)
 - [Storage & Transfer](#storage--transfer)
@@ -24,6 +25,7 @@ Most "awesome agent" lists catalog the agents themselves. This one catalogs what
 - [Code Quality & Security](#code-quality--security)
 - [Testing & QA](#testing--qa)
 - [Cloud & Infra CLIs](#cloud--infra-clis)
+- [Logs & Observability](#logs--observability)
 - [Notifications](#notifications)
 - [MCP Servers](#mcp-servers)
 
@@ -85,6 +87,35 @@ trafilatura -u https://simonwillison.net/2024/Dec/31/llms-in-2024/ --json --with
 ```sh
 markitdown quarterly-report.pdf -o report.md
 rg --json -i 'revenue' report.md | jq -c 'select(.type == "match") | .data.lines.text'
+```
+
+### JSON data → PDF report
+
+**Tools:** gh → Typst
+
+```sh
+gh api 'repos/astral-sh/uv/releases?per_page=10' \
+  --jq '[.[] | {tag: .tag_name, date: .published_at[:10]}]' > releases.json
+cat > report.typ <<'EOF'
+#let rows = json("releases.json")
+= uv releases
+#table(columns: 2, [*Tag*], [*Date*], ..rows.map(r => (r.tag, r.date)).flatten())
+EOF
+typst compile report.typ report.pdf
+```
+
+Typst reads the JSON itself, so the agent writes only the layout, not the data.
+
+### Text description → architecture diagram
+
+**Tools:** D2
+
+```sh
+d2 - diagram.svg <<'EOF'
+agent -> browser: drive
+browser -> page: render
+page -> agent: markdown
+EOF
 ```
 
 ### Legacy CLI output → JSON
@@ -324,6 +355,20 @@ _Download, inspect, and transcribe audio and video._
 - [whisper.cpp](https://github.com/ggml-org/whisper.cpp) 🆓 ★ 54.7k - Local speech-to-text in C/C++; `--output-json` writes timestamped transcripts.
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp) 🆓 ★ 202k - Downloads audio and video from thousands of sites; `-J` dumps metadata as JSON.
 
+## Rendering & Publishing
+
+_Turn text an agent writes into PDFs, diagrams, slides, and recordings._
+
+- [D2](https://github.com/d2lang/d2) 🆓 ★ 25.7k - Declarative diagram language with automatic layout; renders SVG, PNG, or PDF and reads from stdin.
+- [Gotenberg](https://github.com/gotenberg/gotenberg) 🆓 ★ 13.4k - Docker-based API that converts HTML, Markdown, and Office files to PDF with Chromium and LibreOffice.
+- [LibreOffice](https://github.com/LibreOffice/core) 🆓 ★ 4.6k - Office suite whose `soffice --headless --convert-to` turns DOCX, XLSX, and PPTX into PDF and other formats.
+- [Marp CLI](https://github.com/marp-team/marp-cli) 🆓 ★ 3.9k - Converts Markdown into slide decks as HTML, PDF, or PPTX.
+- [Mermaid CLI](https://github.com/mermaid-js/mermaid-cli) 🆓 ★ 5.1k - Renders Mermaid diagrams from `.mmd` or Markdown files to SVG, PNG, or PDF in headless Chromium.
+- [Quarto](https://github.com/quarto-dev/quarto-cli) 🆓 ★ 6.1k - Renders Markdown with executable Python, R, or Julia into HTML, PDF, Word, and slide reports.
+- [Typst](https://github.com/typst/typst) 🆓 ★ 56.8k - Markup-based typesetting that compiles to PDF in milliseconds and reads JSON, CSV, and YAML data directly.
+- [VHS](https://github.com/charmbracelet/vhs) 🆓 ★ 21.2k - Records terminal sessions from a script file to GIF, MP4, or WebM.
+- [WeasyPrint](https://github.com/Kozea/WeasyPrint) 🆓 ★ 9.7k - Converts HTML and CSS to PDF without a browser, including paged-media CSS.
+
 ## JSON & Text Processing
 
 _Filter, reshape, and search tool output inside a pipeline._
@@ -461,6 +506,17 @@ _Provision and inspect infrastructure with machine-readable plans and state._
 - [OpenTofu](https://github.com/opentofu/opentofu) 🆓 ★ 30.6k - Open-source Terraform fork; `tofu plan -json` and `tofu show -json` for machine-readable plans.
 - [Pulumi](https://github.com/pulumi/pulumi) 🆓 💲 ★ 25.8k - Infrastructure as code in general-purpose languages; `pulumi preview --json` shows planned changes.
 - [Wrangler](https://github.com/cloudflare/workers-sdk) 🆓 ★ 4.7k - Cloudflare Workers CLI for deploys, D1, KV, and R2, authenticated by `CLOUDFLARE_API_TOKEN`.
+
+## Logs & Observability
+
+_Query logs and metrics, and emit telemetry, from scripts._
+
+- [lnav](https://github.com/tstack/lnav) 🆓 ★ 10.8k - Log file navigator with a SQL interface; `-n` runs headless and `-c ';SELECT ...'` queries logs from a script.
+- [logcli](https://github.com/grafana/loki) 🆓 💲 ★ 29.1k - Loki's CLI for LogQL queries; `--output=jsonl` prints one JSON log line per entry.
+- [otel-cli](https://github.com/equinix-labs/otel-cli) 🆓 ★ 723 - Sends OpenTelemetry spans from shell scripts; `otel-cli exec` traces a command.
+- [Prometheus](https://github.com/prometheus/prometheus) 🆓 ★ 66.8k - Metrics database whose HTTP API returns JSON; `promtool` checks rules and runs queries from the CLI.
+- [stern](https://github.com/stern/stern) 🆓 ★ 4.9k - Tails logs from many Kubernetes pods at once; `--output json` for machine output.
+- [Vector](https://github.com/vectordotdev/vector) 🆓 ★ 22.8k - Collects, transforms, and routes logs and metrics with pipelines configured in YAML or TOML.
 
 ## Notifications
 
