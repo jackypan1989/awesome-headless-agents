@@ -184,7 +184,7 @@ _Turn a URL into clean Markdown or structured data without driving a browser._
 
 - [Crawl4AI](https://github.com/unclecode/crawl4ai) 🆓 ★ 86.3k - LLM-friendly crawler that outputs clean Markdown.
 - [Crawlee](https://github.com/apify/crawlee) 🆓 ★ 26.3k - Crawling and scraping library for Node.js and Python that stores results as JSON datasets.
-- [curl](https://github.com/curl/curl) 🆓 ★ 43.2k - Transfers data over HTTP and dozens of other protocols; `--fail` exits non-zero on HTTP errors and `-w '%{json}'` reports transfer details.
+- [curl](https://github.com/curl/curl) 🆓 ★ 43.3k - Transfers data over HTTP and dozens of other protocols; `--fail` exits non-zero on HTTP errors and `-w '%{json}'` reports transfer details.
 - [Firecrawl](https://github.com/firecrawl/firecrawl) 🆓 💲 🔌 ★ 195k - Turns websites into LLM-ready Markdown or structured data.
 - [httpx](https://github.com/projectdiscovery/httpx) 🆓 ★ 10.5k - HTTP toolkit that probes URLs at scale; `-json` writes JSON Lines.
 - [Jina Reader](https://github.com/jina-ai/reader) 🆓 💲 ★ 12.2k - Prefix any URL to get LLM-friendly content.
@@ -227,7 +227,7 @@ _Turn PDFs, Office files, and other formats into text an LLM can read._
 - [Marker](https://github.com/datalab-to/marker) 🆓 ★ 40.6k - Converts PDFs and documents to Markdown, HTML, or JSON via `--output_format`.
 - [MarkItDown](https://github.com/microsoft/markitdown) 🆓 🔌 ★ 192k - Converts Office files, PDFs, and more to Markdown for LLMs.
 - [MinerU](https://github.com/opendatalab/MinerU) 🆓 ★ 82.5k - Parses PDFs into LLM-ready Markdown; `mineru parse --json` for structured output.
-- [OCRmyPDF](https://github.com/ocrmypdf/OCRmyPDF) 🆓 ★ 35.1k - Adds a searchable OCR text layer to scanned PDFs; `--sidecar` writes the recognized text to a file.
+- [OCRmyPDF](https://github.com/ocrmypdf/OCRmyPDF) 🆓 ★ 35.2k - Adds a searchable OCR text layer to scanned PDFs; `--sidecar` writes the recognized text to a file.
 - [olmOCR](https://github.com/allenai/olmocr) 🆓 ★ 19.8k - Converts PDFs and images to clean Markdown with a vision language model, keeping reading order, tables, and equations.
 - [Pandoc](https://github.com/jgm/pandoc) 🆓 ★ 46.7k - Universal document converter.
 - [pdfplumber](https://github.com/jsvine/pdfplumber) 🆓 ★ 10.9k - Extracts text, tables, and character positions from PDFs; the CLI emits JSON or CSV.
@@ -250,14 +250,14 @@ _Download, inspect, and transcribe audio and video._
 
 _Filter, reshape, and search tool output inside a pipeline._
 
-- [ast-grep](https://github.com/ast-grep/ast-grep) 🆓 ★ 16.3k - Structural code search and rewrite over syntax trees, with `--json` output.
+- [ast-grep](https://github.com/ast-grep/ast-grep) 🆓 ★ 16.4k - Structural code search and rewrite over syntax trees, with `--json` output.
 - [dasel](https://github.com/TomWright/dasel) 🆓 ★ 8.1k - One selector syntax to query and modify JSON, YAML, TOML, XML, CSV, and more.
 - [fd](https://github.com/sharkdp/fd) 🆓 ★ 44.9k - Fast `find` alternative that respects `.gitignore`; `-0` and `--exec` pipe results safely.
 - [htmlq](https://github.com/mgdm/htmlq) 🆓 ★ 7.6k - Like jq for HTML: extracts elements, text, or attributes with CSS selectors.
 - [jc](https://github.com/kellyjonbrazil/jc) 🆓 ★ 8.7k - Converts legacy CLI output into JSON.
 - [jq](https://github.com/jqlang/jq) 🆓 ★ 35.9k - Command-line JSON processor.
 - [Miller](https://github.com/johnkerl/miller) 🆓 ★ 10.1k - Like awk/sed for CSV, TSV, and JSON.
-- [ripgrep](https://github.com/BurntSushi/ripgrep) 🆓 ★ 69.4k - Fast recursive search with `--json` output.
+- [ripgrep](https://github.com/BurntSushi/ripgrep) 🆓 ★ 69.5k - Fast recursive search with `--json` output.
 - [sd](https://github.com/chmln/sd) 🆓 ★ 7.4k - Find and replace with familiar regex syntax, as a predictable `sed` alternative for scripted edits.
 - [yq](https://github.com/mikefarah/yq) 🆓 ★ 16.2k - Like jq, but for YAML, XML, and TOML.
 
@@ -268,7 +268,7 @@ _Run SQL over files and API results without a database server._
 - [ClickHouse](https://github.com/ClickHouse/ClickHouse) 🆓 💲 ★ 50.6k - Columnar analytics database; `clickhouse local` runs SQL over local or remote files with no server.
 - [Datasette](https://github.com/simonw/datasette) 🆓 ★ 11.5k - Serves SQLite databases with a JSON API for every table and query.
 - [Dolt](https://github.com/dolthub/dolt) 🆓 ★ 24.7k - SQL database with Git-style branches, diffs, and merges; `dolt sql -r json` returns results as JSON.
-- [DuckDB](https://github.com/duckdb/duckdb) 🆓 ★ 42.5k - In-process SQL over CSV, Parquet, and JSON; `-json` output mode.
+- [DuckDB](https://github.com/duckdb/duckdb) 🆓 ★ 42.6k - In-process SQL over CSV, Parquet, and JSON; `-json` output mode.
 - [SQLite](https://sqlite.org) 🆓 - Embedded SQL database; `sqlite3 -json` returns structured query results.
 - [sqlite-utils](https://github.com/simonw/sqlite-utils) 🆓 ★ 2.2k - Loads JSON and CSV into SQLite and runs queries that return JSON by default.
 - [Steampipe](https://github.com/turbot/steampipe) 🆓 ★ 8k - Queries cloud and SaaS APIs with SQL; `--output json` for results.
@@ -309,7 +309,7 @@ _Run agent-generated code where it can't damage the host._
 - [OpenSandbox](https://github.com/opensandbox-group/OpenSandbox) 🆓 ★ 16.2k - Self-hosted sandbox runtime for AI agents.
 - [Pyodide](https://github.com/pyodide/pyodide) 🆓 ★ 14.9k - CPython in WebAssembly, for running Python inside Node.js or a browser without host access.
 - [sandbox-runtime](https://github.com/anthropics/sandbox-runtime) 🆓 ★ 6.6k - OS-level filesystem and network restrictions for any process, no container required.
-- [Vercel Sandbox](https://github.com/vercel/sandbox) 💲 ★ 215 - Ephemeral Firecracker microVMs for untrusted code, with SDK and CLI.
+- [Vercel Sandbox](https://github.com/vercel/sandbox) 💲 ★ 216 - Ephemeral Firecracker microVMs for untrusted code, with SDK and CLI.
 
 ### Isolation Primitives
 
@@ -388,7 +388,7 @@ _Provision and inspect infrastructure with machine-readable plans and state._
 
 _Report results back to humans when the job is done._
 
-- [Apprise](https://github.com/caronc/apprise) 🆓 ★ 17.6k - One CLI and API for notifications to Slack, Discord, email, SMS, and many more services.
+- [Apprise](https://github.com/caronc/apprise) 🆓 ★ 17.7k - One CLI and API for notifications to Slack, Discord, email, SMS, and many more services.
 - [Himalaya](https://github.com/pimalaya/himalaya) 🆓 ★ 7.5k - Reads, searches, and sends email over IMAP and SMTP, with JSON output for scripts.
 - [ntfy](https://github.com/binwiederhier/ntfy) 🆓 💲 ★ 35.1k - Push notifications to phone or desktop with a plain HTTP POST; self-hostable.
 
@@ -400,9 +400,9 @@ _Standalone servers that expose a tool over the Model Context Protocol. Tools th
 - [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) 🆓 ★ 54.1k - Chrome DevTools for agents: debugging, performance traces, and automation, with a `--headless` option.
 - [Cloudflare MCP Servers](https://github.com/cloudflare/mcp-server-cloudflare) 🆓 ★ 4.4k - Official MCP servers for Workers, DNS, observability, and other Cloudflare products.
 - [Context7](https://github.com/upstash/context7) 🆓 💲 ★ 63.7k - Up-to-date, version-specific library documentation for LLMs.
-- [GitHub MCP Server](https://github.com/github/github-mcp-server) 🆓 ★ 33.9k - Official GitHub MCP server.
+- [GitHub MCP Server](https://github.com/github/github-mcp-server) 🆓 ★ 34k - Official GitHub MCP server.
 - [Grafana MCP](https://github.com/grafana/mcp-grafana) 🆓 ★ 3.6k - Queries Grafana dashboards, Prometheus, Loki, alerts, and incidents.
-- [MCP Inspector](https://github.com/modelcontextprotocol/inspector) 🆓 ★ 11.1k - Tests MCP servers; `--cli` mode lists and calls tools from scripts.
+- [MCP Inspector](https://github.com/modelcontextprotocol/inspector) 🆓 ★ 11.2k - Tests MCP servers; `--cli` mode lists and calls tools from scripts.
 - [MCP Reference Servers](https://github.com/modelcontextprotocol/servers) 🆓 ★ 91.6k - Official reference servers for filesystem, Git, fetch, memory, and more.
 - [Playwright MCP](https://github.com/microsoft/playwright-mcp) 🆓 ★ 38.6k - Browser automation via accessibility snapshots.
 - [Serena](https://github.com/oraios/serena) 🆓 ★ 30.7k - Semantic code search and symbol-level editing backed by language servers.
