@@ -537,6 +537,7 @@ _Standalone servers that expose a tool over the Model Context Protocol. Tools th
 - [AWS MCP Servers](https://github.com/awslabs/mcp) 🆓 ★ 9.9k - Official MCP servers for AWS documentation, APIs, and individual services.
 - [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) 🆓 ★ 54.6k - Chrome DevTools for agents: debugging, performance traces, and automation, with a `--headless` option.
 - [Cloudflare MCP Servers](https://github.com/cloudflare/mcp-server-cloudflare) 🆓 ★ 4.4k - Official MCP servers for Workers, DNS, observability, and other Cloudflare products.
+- [DC Hub](https://github.com/azmartone67/dchub-mcp-server) 🆓 💲 🔌 - Remote MCP for live data-center and energy intelligence (Data Center Power Index across 300+ markets); endpoint https://dchub.cloud/mcp, free to start.
 - [Context7](https://github.com/upstash/context7) 🆓 💲 ★ 64.1k - Up-to-date, version-specific library documentation for LLMs.
 - [GitHub MCP Server](https://github.com/github/github-mcp-server) 🆓 ★ 34.1k - Official GitHub MCP server.
 - [Grafana MCP](https://github.com/grafana/mcp-grafana) 🆓 ★ 3.6k - Queries Grafana dashboards, Prometheus, Loki, alerts, and incidents.
