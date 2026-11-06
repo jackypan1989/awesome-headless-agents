@@ -489,6 +489,7 @@ _Linters and scanners that report findings as JSON with non-zero exits._
 
 _Test APIs, performance, accessibility, and links from the command line._
 
+- [agent-qa](https://vostride.com) 🔌 - Runs headless web tests via CLI/MCP, with JSON results, persistent memidex memory, and validated self-improvement (FSL-1.1-ALv2; model costs separate).
 - [Hurl](https://github.com/Orange-OpenSource/hurl) 🆓 ★ 19.3k - Runs and asserts HTTP requests from plain-text files; `--test` and `--json` for CI.
 - [k6](https://github.com/grafana/k6) 🆓 💲 ★ 32.1k - Load testing scripted in JavaScript; thresholds fail the run and `--summary-export` writes JSON.
 - [Lighthouse](https://github.com/GoogleChrome/lighthouse) 🆓 ★ 31k - Audits performance, accessibility, and SEO in headless Chrome; `--output=json`.
